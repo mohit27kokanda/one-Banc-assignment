@@ -459,6 +459,10 @@ input[type="email"] {
 .right-section-mobile {
   display: none;
 }
+.right-section .icon-item .active {
+  color: #0a97e2 !important;
+  font-size: 2.7rem;
+}
 
 /* ********************************************For tab view******************************************************************** */
 @media screen and (min-width: 900px) and (max-width: 1180px) {

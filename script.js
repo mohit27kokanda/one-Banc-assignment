@@ -51,15 +51,15 @@ writeLoop();
 var x = 1;
 
 function updateClass() {
-  let a = document.getElementsByClassName(".icon-item.active");
+  let a = $(".icon.active");
   a.removeClass("active");
   a = a.parent().next(".icon-item");
-  if (a.length == 0) a = document.getElementsByClassName(".icon-item").first();
+  if (a.length == 0) a = $(".icon-item").first();
   a.find(".icon").addClass("active");
 }
 
-document.ready(function () {
+$(document).ready(function () {
   setInterval(function () {
     updateClass();
-  }, x * 1000);
+  }, x * 2000);
 });
