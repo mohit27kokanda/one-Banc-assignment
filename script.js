@@ -63,3 +63,15 @@ $(document).ready(function () {
     updateClass();
   }, x * 2000);
 });
+
+var inputEmailInfo = $("#input-id").value;
+var formateEmail = new RegExp(
+  "^[a-zA-Z0-9]+[a-zA-Z0-9\\._+\\-]*@(?:[a-zA-Z0-9-\\.])+\\.[a-zA-Z]{2,4}$"
+);
+
+$("#submit").onClick(() => {
+  if (inputEmailInfo.length == 0 || formateEmail.test(inputEmailInfo) == 0) {
+    console.log("email");
+    $(".error-msg").addClass("display");
+  }
+});

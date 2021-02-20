@@ -463,6 +463,9 @@ input[type="email"] {
   color: #0a97e2 !important;
   font-size: 2.7rem;
 }
+.display {
+  display: block !important;
+}
 
 /* ********************************************For tab view******************************************************************** */
 @media screen and (min-width: 900px) and (max-width: 1180px) {
