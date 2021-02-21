@@ -64,6 +64,38 @@ $(document).ready(function () {
   }, x * 2000);
 });
 
+var y = 1;
+
+function updateClass1() {
+  let b = $(".icon1.active");
+  b.removeClass("active");
+  b = b.parent().next(".icon-item1");
+  if (b.length == 0) b = $(".icon-item1").first();
+  b.find(".icon1").addClass("active");
+}
+
+$(document).ready(function () {
+  setInterval(function () {
+    updateClass1();
+  }, y * 2000);
+});
+
+var z = 1;
+
+function updateClass2() {
+  let c = $(".icon2.active");
+  c.removeClass("active");
+  c = c.parent().next(".icon-item2");
+  if (c.length == 0) c = $(".icon-item2").first();
+  c.find(".icon2").addClass("active");
+}
+
+$(document).ready(function () {
+  setInterval(function () {
+    updateClass2();
+  }, z * 2000);
+});
+
 var inputEmailInfo = $("#input-id").value;
 var formateEmail = new RegExp(
   "^[a-zA-Z0-9]+[a-zA-Z0-9\\._+\\-]*@(?:[a-zA-Z0-9-\\.])+\\.[a-zA-Z]{2,4}$"
